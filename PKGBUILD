@@ -1,5 +1,5 @@
 pkgname=steamdeck-pacman
-pkgver=1.1.0
+pkgver=1.1.1
 pkgrel=1
 pkgdesc="A way to use pacman on the Steam Deck without messing up your system."
 arch=('x86_64')
@@ -13,6 +13,8 @@ package() {
     mkdir -p "${pkgdir}/home/$pkgname/db"
     mkdir -p "${pkgdir}/home/$pkgname/pacman/usr/bin"
     mkdir -p "${pkgdir}/home/$pkgname/pacman/etc/pacman.d"
+    ln -s /opt "${pkgdir}/home/$pkgname/pacman/opt"
+    ln -s /srv "${pkgdir}/home/$pkgname/pacman/srv"
     cp "${srcdir}/pkg.sh" "${pkgdir}/home/$pkgname/pacman/usr/bin/pkg"
     chmod +x "${pkgdir}/home/$pkgname/pacman/usr/bin/pkg"
     cp "${srcdir}/pkg-key.sh" "${pkgdir}/home/$pkgname/pacman/usr/bin/pkg-key"
