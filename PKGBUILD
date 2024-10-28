@@ -1,5 +1,5 @@
 pkgname=steamdeck-pacman
-pkgver=1.0.1
+pkgver=1.0.2
 pkgrel=1
 pkgdesc="A way to use pacman on the Steam Deck without turning off readonly mode."
 arch=('x86_64')
@@ -24,4 +24,7 @@ package() {
     cp "${srcdir}/mirrorlist" "${pkgdir}/home/deck/.local/$pkgname/mirrorlist"
     cp "${srcdir}/pacman.conf" "${pkgdir}/home/deck/.local/$pkgname/pacman.conf"
     cp "${srcdir}/export-cmd.txt" "${pkgdir}/home/deck/.local/$pkgname/export-cmd.txt"
+}
+post_install() {
+    exec /home/deck/.local/bin/pkg-init
 }
