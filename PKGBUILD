@@ -1,5 +1,5 @@
 pkgname=steamdeck-pacman
-pkgver=1.0.2
+pkgver=1.0.3
 pkgrel=1
 pkgdesc="A way to use pacman on the Steam Deck without turning off readonly mode."
 arch=('x86_64')
