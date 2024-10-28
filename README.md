@@ -12,7 +12,7 @@ The commands work the same as the actual `pacman` command.
 ## Install
 
 To install `steamdeck-pacman`, go to the [latest release](https://github.com/Diablo2009/steamdeck-pacman/releases/latest) and download the `steamdeck-pacman.pkg.tar.zst` file. Open up the terminal.
-Change directory to your downloads folder: `cd Downloads`, then type `sudo pacman -U steamdeck-pacman.pkg.tar.zst`. Then press `y` when it asks you whether you want to install the file. After the install finishes, type `/home/deck/.local/bin/pkg-init`. That will add `/home/deck/.local/bin` to your path.
+Change directory to your downloads folder: `cd Downloads`, then type `sudo pacman -U steamdeck-pacman.pkg.tar.zst`. Then press `y` when it asks you whether you want to install the file.
 
 ## How to Contribute
 
