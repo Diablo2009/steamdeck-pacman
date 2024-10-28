@@ -1,11 +1,11 @@
 pkgname=steamdeck-pacman
-pkgver=1.0.0
-pkgrel=2
+pkgver=1.0.1
+pkgrel=1
 pkgdesc="A way to use pacman on the Steam Deck without turning off readonly mode."
 arch=('x86_64')
 depends=('pacman')
-source=('pkg.sh' 'pkg-key.sh' 'pkg-conf.sh' 'pkg-db-upgrade.sh' 'pacman.conf' 'mirrorlist')
-provides=('pkg' 'pkg-key')
+source=('pkg.sh' 'pkg-key.sh' 'pkg-conf.sh' 'pkg-db-upgrade.sh' 'pkg-init.sh' 'pacman.conf' 'mirrorlist' 'export-cmd.txt')
+provides=('pkg' 'pkg-key' 'pkg-conf' 'pkg-db-upgrade')
 license=('CC0-1.0')
 sha512sums=('SKIP')
 package() {
@@ -19,6 +19,9 @@ package() {
     chmod +x "${pkgdir}/home/deck/.local/bin/pkg-conf"
     cp "${srcdir}/pkg-db-upgrade.sh" "${pkgdir}/home/deck/.local/bin/pkg-db-upgrade"
     chmod +x "${pkgdir}/home/deck/.local/bin/pkg-db-upgrade"
+    cp "${srcdir}/pkg-init.sh" "${pkgdir}/home/deck/.local/bin/pkg-init"
+    chmod +x "${pkgdir}/home/deck/.local/bin/pkg-init"
     cp "${srcdir}/mirrorlist" "${pkgdir}/home/deck/.local/$pkgname/mirrorlist"
     cp "${srcdir}/pacman.conf" "${pkgdir}/home/deck/.local/$pkgname/pacman.conf"
+    cp "${srcdir}/export-cmd.txt" "${pkgdir}/home/deck/.local/$pkgname/export-cmd.txt"
 }

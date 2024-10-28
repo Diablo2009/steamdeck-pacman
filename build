@@ -1,3 +1,8 @@
 #! /bin/bash
 
-makepkg -sr --skipinteg $@
+if [[ $1 == "-r" ]]; then
+    rm -rf $(pwd)/{pkg,src,*.pkg.tar.zst}
+fi
+echo "Building Package File & Installing Package"
+sleep 3
+makepkg -sri --skipinteg
