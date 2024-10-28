@@ -1,12 +1,12 @@
 #! /bin/bash
 
 ## Locations
-MAIN=/home/deck/.local/steamdeck-pacman
-PKGROOT=/home/deck/.local/bin
+MAIN=/home/steamdeck-pacman
+PKGROOT=$MAIN/pacman
 GPG=$MAIN/gnupg
 HOOK=$MAIN/hook
-CONFIG=$MAIN/pacman.conf
-MIRRORLIST=$MAIN/mirrorlist
+CONFIG=$PKGROOT/etc/pacman.conf
+MIRRORLIST=$PKGROOT/etc/pacman.d/mirrorlist
 CACHE=$MAIN/cache
 LOG=$MAIN/pacman.log
 

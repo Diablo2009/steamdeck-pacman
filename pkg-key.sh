@@ -1,9 +1,9 @@
 #! /bin/bash
 
 ## Locations
-MAIN=/home/deck/.local/steamdeck-pacman
+MAIN=/home/steamdeck-pacman
+PKGROOT=$MAIN/pacman
 GPG=$MAIN/gnupg
-CONFIG=$MAIN/pacman.conf
-MIRRORLIST=$MAIN/mirrorlist
+CONFIG=$PKGROOT/etc/pacman.conf
 
 sudo pacman-key --config $CONFIG --gpgdir $GPG $@

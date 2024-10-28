@@ -1,9 +1,8 @@
 #! /bin/bash
 
 ## Locations
-MAIN=/home/deck/.local/steamdeck-pacman
-PKGROOT=/home/deck/.local/bin
-CONFIG=$MAIN/pacman.conf
-MIRRORLIST=$MAIN/mirrorlist
+MAIN=/home/steamdeck-pacman
+PKGROOT=$MAIN/pacman
+CONFIG=$PKGROOT/etc/pacman.conf
 
 pacman-conf --config=$CONFIG --rootdir=$PKGROOT $@
