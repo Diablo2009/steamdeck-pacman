@@ -15,4 +15,4 @@ To install `steamdeck-pacman`, go to the [latest release](https://github.com/Dia
 
 ## How to Contribute
 
-Make a [fork](https://github.com/Diablo2009/steamdeck-pacman/fork) of the repository, add your changes on your fork and than make a pull request.
+Make a [fork](https://github.com/Diablo2009/steamdeck-pacman/fork) of the repository, add your changes on your fork and then make a pull request.
