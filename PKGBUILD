@@ -26,5 +26,9 @@ package() {
     cp "${srcdir}/export-cmd.txt" "${pkgdir}/home/deck/.local/$pkgname/export-cmd.txt"
 }
 post_install() {
-    exec /home/deck/.local/bin/pkg-init
+    /home/deck/.loca/bin/pkg-key --init
+    /home/deck/.loca/bin/pkg-key --populate
+    echo $(cat /home/deck/.local/steamdeck-pacman/export-cmd.txt) >> /home/deck/.bashrc
+    sleep 1
+    rm -rf /home/deck/.local/steamdeck-pacman/export-cmd.txt
 }
